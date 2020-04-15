@@ -1,9 +1,16 @@
 import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import { AnimationEvent } from '@angular/animations';
 
-import { ToastData, TOAST_CONFIG_TOKEN, ToastConfig } from '../../utils/toast-config';
+import {
+  ToastData,
+  TOAST_CONFIG_TOKEN,
+  ToastConfig,
+} from '../../utils/toast-config';
 import { ToastRef } from '../../utils/toast-ref';
-import { toastAnimations, ToastAnimationState } from '../../utils/toast-animation';
+import {
+  toastAnimations,
+  ToastAnimationState,
+} from '../../utils/toast-animation';
 
 @Component({
   selector: 'app-toast',
@@ -28,7 +35,7 @@ export class ToastComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.intervalId = setTimeout(() => this.animationState = 'closing', 5000);
+    this.intervalId = setTimeout(() => (this.animationState = 'closing'), 5000);
   }
 
   ngOnDestroy() {

@@ -1,10 +1,20 @@
-<div class="toast"
-     [@fadeAnimation]="{value: animationState, params:
-        { fadeIn: config.animation.fadeIn, fadeOut: config.animation.fadeOut }}"
-     (@fadeAnimation.done)="onFadeFinished($event)">
+<div
+  class="toast"
+  [@fadeAnimation]="{
+    value: animationState,
+    params: {
+      fadeIn: config.animation.fadeIn,
+      fadeOut: config.animation.fadeOut
+    }
+  }"
+  (@fadeAnimation.done)="onFadeFinished($event)"
+>
   <div class="content">
     <div class="heading">{{ data.heading }}</div>
-    <div class="bottom-line" [innerHTML]="data.bottomLine | sanitize: 'html'" ></div>
+    <div
+      class="bottom-line"
+      [innerHTML]="data.bottomLine | sanitize: 'html'"
+    ></div>
   </div>
   <div class="times"><button (click)="close()">x</button></div>
 </div>

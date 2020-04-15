@@ -1,16 +1,16 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { ToastService } from './core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'modal-notification';
   private count = 1;
 
-  constructor(private toastService: ToastService) { }
+  constructor(private toastService: ToastService) {}
 
   showToast() {
     this.toastService.show({

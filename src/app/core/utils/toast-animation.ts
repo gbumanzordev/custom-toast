@@ -15,7 +15,7 @@ export const toastAnimations: {
     transition('void => *', [style({ opacity: 0 }), animate('{{ fadeIn }}ms')]),
     transition(
       'default => closing',
-      animate('{{ fadeOut }}ms', style({ opacity: 0 })),
+      animate('{{ fadeOut }}ms', style({ opacity: 0 }))
     ),
   ]),
 };
